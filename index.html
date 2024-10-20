@@ -2,97 +2,178 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1920, height=1080, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NoBroke</title>
-</head>
-<body style="background-color: aquamarine; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: larger;">
+    <style>
+        .center { text-align: center; }
+        body { background-color: rgb(22, 22, 22); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    .result-success 
+    {
+    color: green;
+    font-weight: bold;
+    }
+    .result-warning 
+    {
+    color: orange;
+    font-weight: bold;
+    }
+    .result-error 
+    {
+    color: red;
+    font-weight: bold;
+    }
+</style>
 
+    
+<body style="background-color: rgb(22, 22, 22); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" >
+    <!--image-->
+    <div class="center">
+        <img src="C:\Users\esaen\Downloads\sponchbob-removebg-preview.png" alt="Centered Image" width="300" height="200">
+    </div>
     <!--title-->
-    <h1 style="font-weight: bolder; color:blueviolet" align="center">Welcome to NoBroke</h1>
+    <h1 style="font-weight: bolder; color:rgb(64, 16, 128)" align="center">NoBroke</h1>
 
     <!--description-->
-    <p style="color: rgb(109, 63, 152);" align="center">NoBroke is a simple to use tool to help anyone budget for their future.</p>
+    <p style="color: rgb(128, 128, 128);" align="center">Welcome to NoBroke, a simple budgeting tool to improve and keep track of your finances. No matter your situation, NoBroke has you covered.</p>
     
     <!--box 1-->
-    <p style="font-size: larger; border: 2px solid rgb(109, 63, 152); font-weight: bolder; color:blueviolet; padding-left: 10px;" for="Yearly Income">Yearly Income
+    <p style="font-size: large; border: 2px solid rgb(64, 16, 128); font-weight: bolder; color:rgb(128, 128, 128); padding-left: 10px;" for="Monthly Income" align="center">Monthly Income
+        <span style="font-size: large; font-style: italic;"/>
+        <span class="tooltip-icon" title="(Total annual income from all sources after taxes)"><img src="C:\Users\esaen\Downloads\tool-tip.png" alt="Centered Image" width="16" height="16"></span>
         <label>
-            <input style="font-size: larger;" size="25" type="number" id="Yearly Income"/>
+            <input style="font-size: larger;" size="32" type="number" id="MonthlyIncome"/>
         </label>
-        <font style="font-size: large; font-style: italic;"/>
-        Total yearly income from all sources before taxes.
     </p>
 
     <!--box 2-->
-    <p style="font-style: normal; font-size: larger; border: 2px solid rgb(109, 63, 152); font-weight: bolder; color:blueviolet; padding-left: 10px;" for="Cost of Living">Cost of Living
+    <p style="font-size: large; border: 2px solid rgb(64, 16, 128); font-weight: bolder; color:rgb(128, 128, 128); padding-left: 10px;" for="Living Cost" align="center">Living Cost
+        <span style="font-size: large; font-style: italic;"/>
+        <span class="tooltip-icon" title="(Total cost of housing, utilities, transportation, groceries)"><img src="C:\Users\esaen\Downloads\tool-tip.png" alt="Centered Image" width="16" height="16"></span>
         <label>
-            <input style="font-size: larger;" size="25" type="number" id="Cost of Living"/>
+            <input style="font-size: larger;" size="32" type="number" id="LivingCost"/>
         </label>
-        <font style="font-size: large; font-style: italic;"/>
-        Current total housing, utilities, and transportation costs.
     </p>
 
     <!--box 3-->
-    <p style="font-style: normal; font-size: larger; border: 2px solid rgb(109, 63, 152); font-weight: bolder; color:blueviolet; padding-left: 10px;" for="Dependents">Dependents
+    <p style="font-size: large; border: 2px solid rgb(64, 16, 128); font-weight: bolder; color:rgb(128, 128, 128); padding-left: 10px;" for="Dependents' Cost" align="center">Dependents' Cost
+        <span style="font-size: large; font-style: italic;"/>
+        <span class="tooltip-icon" title="(Total cost of dependent's on sourced income)"><img src="C:\Users\esaen\Downloads\tool-tip.png" alt="Centered Image" width="16" height="16"></span>
         <label>
-            <input style="font-size: larger;" size="25" type="number" id="Dependents"/>
+            <input style="font-size: larger;" size="32" type="number" id="DependentsCost"/>
         </label>
-        <font style="font-size: large; font-style: italic;"/>
-        Number of persons in your household dependent on your income.
     </p>
 
     <!--box 4-->
-    <p style="font-style: normal; font-size: larger; border: 2px solid rgb(109, 63, 152); font-weight: bolder; color:blueviolet; padding-left: 10px;" for="Cost of Dependents">Cost of Dependents
+    <p style="font-size: large; border: 2px solid rgb(64, 16, 128); font-weight: bolder; color:rgb(128, 128, 128); padding-left: 10px;" for="Debts" align="center">Debts
+        <span style="font-size: large; font-style: italic;"/>
+        <span class="tooltip-icon" title="(Total amount of outstanding debts)"><img src="C:\Users\esaen\Downloads\tool-tip.png" alt="Centered Image" width="16" height="16"></span>
         <label>
-            <input style="font-size: larger;" size="25" type="number" id="Cost of Dependents"/>
+            <input style="font-size: larger;" size="32" type="number" id="Debts"/>
         </label>
-        <font style="font-size: large; font-style: italic;"/>
-        Contribution to the cost of living of your dependents.
     </p>
 
     <!--box 5-->
-    <p style="font-style: normal; font-size: larger; border: 2px solid rgb(109, 63, 152); font-weight: bolder; color:blueviolet; padding-left: 10px;" for="Debt">Debt
+    <p style="font-size: large; border: 2px solid rgb(64, 16, 128); font-weight: bolder; color:rgb(128, 128, 128); padding-left: 10px;" for="Monthly Repayment" align="center">Monthly Repayment
+        <span class="tooltip-icon" title="(Total cost of monthly debt repayment)"><img src="C:\Users\esaen\Downloads\tool-tip.png" alt="Centered Image" width="16" height="16"></span>
         <label>
-            <input style="font-size: larger;" size="25" type="number" id="Debt"/>
+            <input style="font-size: larger;" size="32" type="number" id="MonthlyRepayment"/>
         </label>
-        <font style="font-size: large; font-style: italic;"/>
-        Total outstanding debt.
     </p>
 
     <!--box 6-->
-    <p style="font-style: normal; font-size: larger; border: 2px solid rgb(109, 63, 152); font-weight: bolder; color:blueviolet; padding-left: 10px;" for="Monthly Obligation">Monthly Obligation
+    <p style="font-size: large; border: 2px solid rgb(64, 16, 128); font-weight: bolder; color:rgb(128, 128, 128); padding-left: 10px;" for="Emergency Fund" align="center">Emergency Fund
+        <span style="font-size: large; font-style: italic;"/>
+        <span class="tooltip-icon" title="(Total amount contributed monthly to emergency funds)"><img src="C:\Users\esaen\Downloads\tool-tip.png" alt="Centered Image" width="16" height="16"></span>
         <label>
-            <input style="font-size: larger;" size="25" type="number" id="Monthly Obligation"/>
+            <input style="font-size: larger;" size="32" type="number" id="EmergencyFund"/>
         </label>
-        <font style="font-size: large; font-style: italic;"/>
-        Total Monthly repayment of debt.
     </p>
-
+    
     <!--box 7-->
-    <p style="font-style: normal; font-size: larger; border: 2px solid rgb(109, 63, 152); font-weight: bolder; color:blueviolet; padding-left: 10px;" for="Emergency Fund">Emergency Fund
+    <p style="font-size: large; border: 2px solid rgb(64, 16, 128); font-weight: bolder; color:rgb(128, 128, 128); padding-left: 10px;" for="Retirement Savings" align="center">Retirement Savings
+        <span style="font-size: large; font-style: italic;"/>
+        <span class="tooltip-icon" title="(Total amount contributed monthly to retirement plan)"><img src="C:\Users\esaen\Downloads\tool-tip.png" alt="Centered Image" width="16" height="16"></span>
         <label>
-            <input style="font-size: larger;" size="25" type="number" id="Emergency Fund"/>
+            <input style="font-size: larger;" size="32" type="number" id="RetirementSavings"/>
         </label>
-        <font style="font-size: large; font-style: italic;"/>
-        Amount set aside for unexpected events.
     </p>
 
     <!--box 8-->
-    <p style="font-style: normal; font-size: larger; border: 2px solid rgb(109, 63, 152); font-weight: bolder; color:blueviolet; padding-left: 10px;" for="Retirement Savings">Retirement Savings
+    <p style="font-size: large; border: 2px solid rgb(64, 16, 128); font-weight: bolder; color:rgb(128, 128, 128); padding-left: 10px;" for="Other Savings" align="center">Other Savings
+        <span style="font-size: large; font-style: italic;"/>
+        <span class="tooltip-icon" title="(Total amount contributed monthly to personal savings)"><img src="C:\Users\esaen\Downloads\tool-tip.png" alt="Centered Image" width="16" height="16"></span>
         <label>
-            <input style="font-size: larger;" size="25" type="number" id="Retirement Savings"/>
+            <input style="font-size: larger;" size="32" type="number" id="OtherSavings"/>
         </label>
-        <font style="font-size: large; font-style: italic;"/>
-        Amount set aside for retirement.
     </p>
 
     <!--box 9-->
-    <p style="font-style: normal; font-size: larger; border: 2px solid rgb(109, 63, 152); font-weight: bolder; color:blueviolet; padding-left: 10px;" for="Other Savings">Other Savings
+    <p style="font-size: large; border: 2px solid rgb(64, 16, 128); font-weight: bolder; color:rgb(128, 128, 128); padding-left: 10px;" for="Saving Percent" align="center">Saving Percent
+        <span style="font-size: large; font-style: italic;"/>
+        <span class="tooltip-icon" title="(Percent goal to save per month)"><img src="C:\Users\esaen\Downloads\tool-tip.png" alt="Centered Image" width="16" height="16"></span>
         <label>
-            <input style="font-size: larger;" size="25" type="number" id="Other Savings"/>
+            <input style="font-size: larger;" size="32" type="number" id="SavingPercent"/>
         </label>
-        <font style="font-size: large; font-style: italic;"/>
-        Any other savings set aside.
     </p>
 
+    <!--box 10-->
+    <p style="font-size: large; border: 2px solid rgb(64, 16, 128); font-weight: bolder; color:rgb(128, 128, 128); padding-left: 10px;" for="Personal Purchases" align="center">Personal Purchases
+        <span style="font-size: large; font-style: italic;"/>
+        <span class="tooltip-icon" title="(Percent )"><img src="C:\Users\esaen\Downloads\tool-tip.png" alt="Centered Image" width="16" height="16"></span>
+        <label>
+            <input style="font-size: larger;" size="32" type="number" id="PersonalPurchases"/>
+        </label>
+    </p>
+
+    <!--button-->
+    <p align="center">
+        <button id="calculateButton" style="font-size: large; padding: 10px 20px;">Calculate Budget</button>
+    </p>
+
+    <!--display result-->
+    <div id="result" style="text-align: center; font-size: large; margin-top: 20px;"></div>
+    <script>
+        document.getElementById('calculateButton').addEventListener('click', function() {
+            //user input retrievals
+            const monthlyIncome = parseFloat(document.getElementById('MonthlyIncome').value) || 0;
+            const livingCost = parseFloat(document.getElementById('LivingCost').value) || 0;
+            const dependentsCost = parseFloat(document.getElementById('DependentsCost').value) || 0;
+            const debts = parseFloat(document.getElementById('Debts').value) || 0;
+            const monthlyRepayment = parseFloat(document.getElementById('MonthlyRepayment').value) || 0;
+            const emergencyFund = parseFloat(document.getElementById('EmergencyFund').value) || 0;
+            const retirementSavings = parseFloat(document.getElementById('RetirementSavings').value) || 0;
+            const otherSavings = parseFloat(document.getElementById('OtherSavings').value) || 0;
+            const savingPercent = parseFloat(document.getElementById('SavingPercent').value) || 0;
+            const personalPurchases = parseFloat(document.getElementById('PersonalPurchases').value) || 0;
+
+            //calculations
+            const monthlyExpenses = livingCost + dependentsCost + monthlyRepayment + emergencyFund + personalPurchases;
+            const annualIncome = 12 * monthlyIncome;
+            const monthlySavings = retirementSavings + otherSavings;
+            
+            //result generation
+            let resultMessage = `Your monthly income is $${monthlyIncome.toFixed(2)}, making your annual income $${annualIncome.toFixed(2)}.\n`;
+            resultMessage += `Your total monthly savings are $${monthlySavings.toFixed(2)}.\n`;
+            resultMessage += `Your total monthly expenses are $${monthlyExpenses.toFixed(2)}.\n`;
+
+            if (monthlySavings < (savingPercent / 100) * monthlyIncome) {
+                resultMessage += "<span class='result-warning'>Warning: Your personal savings goal is not being met!</span>\n";
+            } else {
+                resultMessage += "<span class='result-success'>You are on track with your personal savings goal!</span>\n";
+            }
+
+            if (monthlyExpenses > 0.5 * monthlyIncome) {
+                resultMessage += "<span class='result-warning'>Warning: Your expenses exceed 50% of your monthly income!</span>\n";
+            }
+
+            if (monthlyExpenses > monthlyIncome) {
+                resultMessage += "<span class='result-warning'>Warning: Your expenses exceed your income!</span>\n";
+            } else {
+                resultMessage += "<span class='result-success'>You are on track with your budget.</span>\n";
+            }
+            //result display
+            document.getElementById('result').innerHTML = resultMessage;
+        });
+    </script>
 </body>
 </html>
