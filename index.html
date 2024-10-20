@@ -7,6 +7,11 @@
     <style>
         .center { text-align: center; }
         body { background-color: rgb(22, 22, 22); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    .result-msg
+    {
+    color: rgb(64, 16, 128);
+    font-weight: bold;
+    }
     .result-success 
     {
     color: green;
@@ -31,10 +36,10 @@
         <img src="sponchbob-removebg-preview.png" alt="Centered Image" width="400" height="200">
     </div>
     <!--title-->
-    <h1 style="font-weight: bolder; color:rgb(64, 16, 128)" align="center">NoBroke</h1>
+    <h1 style="font-weight: bolder; color: blueviolet" align="center">NoBroke</h1>
 
     <!--description-->
-    <p style="color: rgb(128, 128, 128);" align="center">Welcome to NoBroke, a simple budgeting tool to improve and keep track of your finances. No matter your situation, NoBroke has you covered.</p>
+    <p style="color: blueviolet; font-size: large; font-weight: bold;" align="center">Welcome to NoBroke, a simple budgeting tool to improve and keep track of your finances. No matter your situation, NoBroke has you covered.</p>
     
     <!--box 1-->
     <p style="font-size: large; border: 2px solid rgb(64, 16, 128); font-weight: bolder; color:rgb(128, 128, 128); padding-left: 10px;" for="Monthly Income" align="center">Monthly Income
@@ -127,11 +132,11 @@
 
     <!--button-->
     <p align="center">
-        <button id="calculateButton" style="font-size: large; padding: 10px 20px;">Calculate Budget</button>
+        <button id="calculateButton" style="background-color: violet; color: rgb(64, 16, 128); font-weight: bolder; font-size: large; padding: 10px 20px;">NoBroke</button>
     </p>
 
     <!--display result-->
-    <div id="result" style="text-align: center; font-size: large; margin-top: 20px;"></div>
+    <div id="result" style="color: blueviolet; text-align: center; font-weight: bold; font-size: large; margin-top: 20px;"></div>
     <script>
         document.getElementById('calculateButton').addEventListener('click', function() {
             //user input retrievals
